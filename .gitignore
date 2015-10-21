@@ -3,3 +3,4 @@ test/artifacts/*
 npm-debug.log
 .DS_Store
 *.env
+.otto
