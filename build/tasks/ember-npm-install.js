@@ -1,14 +1,11 @@
 var exec = require('child_process').exec;
 var gulp = require('gulp');
 
-
-var EMBER_ENV = process.env.EMBER_ENV || 'development';
-
-gulp.task('build-ember',['ember-bower-install','ember-npm-install'], function(callback){
+gulp.task('ember-npm-install', function(callback){
 
   var emberBuild =
-  exec('rm -rf dist && docker run --rm -v `pwd`:/myapp danlynn/ember-cli:1.13.8  build --environment ' + EMBER_ENV,
-  {cwd: 'client'},
+    exec('docker run  --entrypoint "/usr/local/bin/npm" --rm -v `pwd`:/myapp danlynn/ember-cli:1.13.8 install',
+    {cwd: 'client'},
     function (error, stdout, stderr) {
 
       console.log(stdout.toString());
