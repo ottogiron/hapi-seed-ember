@@ -22,10 +22,7 @@ var manifest = {
         labels: ['web']
     }],
     plugins: {
-      './lib/plugin-loader': { paths: ['../routes']},
-      'bell': {
-        
-      }
+      './lib/plugin-loader': { paths: ['../routes']}
     }
 };
 

@@ -8,7 +8,7 @@ gulp.task('build-ember', function(callback){
 
   exec('rm -rf dist && ember build --environment ' + EMBER_ENV, {cwd: 'client'},
     function (error, stdout, stderr) {
-      
+
       console.log(stdout.toString());
       console.log(stderr.toString());
       return callback(error)
