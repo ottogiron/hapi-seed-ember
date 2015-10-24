@@ -1,21 +1,32 @@
-# Node Hapi Seed
+#  Hapi Seed Ember
 
-Node Hapi Seed is a Node.js project template which includes standard web project features such  build automation, routes, unit testing, Dockerbuild file, configuration, and logging.
+ Hapi Seed Ember is a Node.js project template which includes standard web project features such  build automation, routes, unit testing, Dockerbuild file, configuration, and logging.
+
+ Based on https://github.com/ottogiron/node-hapi-seed.git includes a client app generated with <a href="http://www.ember-cli.com/">ember-cli</a>
+
 
 ## Installation
 
 ```bash
-git clone https://github.com/ottogiron/node-hapi-seed.git <my-project-name>
+git clone https://github.com/ottogiron/hapi-seed-ember.git <my-project-name>
 git remote set-url origin <my-own-github-repository>
 ```
 
 ## Usage
 
+### Prerrequisites
+
+Install <a href="http://www.ember-cli.com/">ember-cli</a>
+
+```bash
+npm install -g ember-cli
+```
+
 ### Run the server
 
 **Dev env**
 
-Uses <a href="https://github.com/remy/nodemon">nodemon</a> gulp task
+Uses buid/tasks/server.js task
 
 ```bash
 cd <my-project-name>
@@ -32,6 +43,21 @@ Runs server.js
 npm install
 npm start
 ```
+
+### Ember application
+
+The ember application is under client folder.
+
+You can replace that application and genereate a new one with your desired ember-cli version (if neccesary).
+
+Generated using the following command:
+
+```bash
+ember new client
+```
+
+also removed .git folder under the generated application.
+
 
 ### Unit testing
 
