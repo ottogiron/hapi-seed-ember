@@ -5,7 +5,7 @@ var IMAGE_TAG = process.env.DOCKER_IMAGE_TAG || 'ottogiron/hapiember';
 
 gulp.task('build-docker', function(callback){
 
-  var dockerBuild = exec('docker build -f docker/Dockerfile -t '+ IMAGE_TAG +' .');
+  var dockerBuild = exec('docker build --no-cache -f docker/Dockerfile -t '+ IMAGE_TAG +' .');
 
   dockerBuild.stdout.on('data', function (data) {
     console.log(data.toString());
