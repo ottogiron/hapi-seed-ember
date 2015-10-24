@@ -1,5 +1,5 @@
 {
-  "name": "node-hapi-seed",
+  "name": "roots",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -22,6 +22,7 @@
   },
   "homepage": "",
   "dependencies": {
+    "bell": "^5.4.0",
     "confidence": "^1.x.x",
     "dotenv": "^1.2.0",
     "glue": "^2.x.x",
