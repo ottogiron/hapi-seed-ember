@@ -7,3 +7,5 @@ test
 gulpfile.js
 LICENCE
 README.md
+client
+!client/dist

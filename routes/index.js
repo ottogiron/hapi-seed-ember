@@ -4,19 +4,18 @@ var Hoek = require('hoek');
 exports.register = function (server, options, next) {
 
     server.route({
-        method: 'GET',
-        path: '/',
-        handler: function (request, reply) {
-
-            reply({ message: 'Welcome to the plot device.' });
-        }
+      method: 'GET',
+      path: '/{param*}',
+      handler: {
+          directory: {
+              path: 'client/dist'
+          }
+      }
     });
-
-
     next();
 };
 
 
 exports.register.attributes = {
-    name: 'api'
+    name: 'index'
 };

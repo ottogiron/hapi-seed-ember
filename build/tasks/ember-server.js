@@ -1,11 +1,11 @@
 var gulp = require('gulp');
-var spawn = require('child_process').spawn;
+var exec = require('child_process').exec;
 
 var proxyServer = "http://localhost:" +  process.env.APP_PORT;
 
 gulp.task('ember-server', function(callback){
 
-  var ems = spawn('ember', ['server', '--proxy', proxyServer], {cwd: 'client'});
+  var ems = exec('ember server --proxy ' + proxyServer, {cwd: 'client'});
 
   ems.stdout.on('data', function (data) {
     console.log(data.toString());
@@ -15,5 +15,6 @@ gulp.task('ember-server', function(callback){
     console.log(data.toString());
   });
 
-  callback();
+  return callback();
+
 });
