@@ -5,7 +5,7 @@ var proxyServer = "http://localhost:" +  process.env.APP_PORT;
 
 gulp.task('ember-server', function(callback){
 
-  var ems = spawn('ember', ['server'], {cwd: './client'});
+  var ems = spawn('ember', ['server', '--proxy', proxyServer], {cwd: 'client'});
 
   ems.stdout.on('data', function (data) {
     console.log(data.toString());
