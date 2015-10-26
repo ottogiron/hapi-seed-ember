@@ -4,8 +4,8 @@ NODE_VERSION = 4.2
 EMBER_PATH = client
 EMBER_CLI_VERSION = 1.13.8
 EMBER_IMAGE_TAG = danlynn/ember-cli:$(EMBER_CLI_VERSION)
-EMBER_ENV = development
-
+EMBER_ENV = production
+ 
 all: docker-build
 
 clean: ember-clean
