@@ -4,6 +4,7 @@ NODE_VERSION = 4.2
 EMBER_PATH = client
 EMBER_CLI_VERSION = 1.13.8
 EMBER_IMAGE_TAG = danlynn/ember-cli:$(EMBER_CLI_VERSION)
+EMBER_ENV = development
 
 all: docker-build
 
@@ -19,6 +20,8 @@ npm-install-dev:
 	@docker run  --rm  -v `pwd`:/usr/src/myapp -w /usr/src/myapp node:$(NODE_VERSION) npm install --development
 
 ember-build: ember-dependencies-install
+	@cd $(EMBER_PATH) && \
+ 	docker run   --rm -v `pwd`:/myapp $(EMBER_IMAGE_TAG) build --environment $(EMBER_ENV)
 
 ember-dependencies-install:
 	@cd $(EMBER_PATH) && \
