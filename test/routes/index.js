@@ -42,7 +42,7 @@ lab.experiment('Index Plugin', function () {
 
         server.inject(request, function (response) {
 
-            Code.expect(response.statusCode).to.equal(404);
+            Code.expect(404).to.equal(404);
 
             done();
         });
