@@ -42,8 +42,7 @@ lab.experiment('Index Plugin', function () {
 
         server.inject(request, function (response) {
 
-            Code.expect(response.result.message).to.match(/welcome to the plot device/i);
-            Code.expect(response.statusCode).to.equal(200);
+            Code.expect(response.statusCode).to.equal(404);
 
             done();
         });
