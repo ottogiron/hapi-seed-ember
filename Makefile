@@ -1,8 +1,21 @@
-IMAGE_TAG = ottogiron/hapiseed
+IMAGE_TAG = ottogiron/hapiember
+EMBER_PATH = client
+EMBER_CLI_VERSION = 1.13.8
+EMBER_IMAGE_TAG = danlynn/ember-cli:$(EMBER_CLI_VERSION)
 
 all: docker-build
 
-docker-build:
-	docker build --no-cache -f docker/Dockerfile -t $(IMAGE_TAG) .
+docker-build: ember-build
+	@docker build --no-cache -f docker/Dockerfile -t $(IMAGE_TAG) .
 
-.PHONY: docker-build
+ember-build: ember-clean ember-dependencies-install
+
+ember-dependencies-install:
+	@cd $(EMBER_PATH) && \
+	docker run  --entrypoint "/usr/local/bin/bower" --rm -v `pwd`:/myapp $(EMBER_IMAGE_TAG) install --allow-root> &&  \
+	docker run  --entrypoint "/usr/local/bin/npm" --rm -v `pwd`:/myapp $(EMBER_IMAGE_TAG) install>&1
+
+ember-clean:
+	@rm -rf $(EMBER_PATH)/dist
+
+.PHONY: ember-clean
