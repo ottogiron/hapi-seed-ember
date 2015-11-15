@@ -22,6 +22,8 @@ var manifest = {
         labels: ['web']
     }],
     plugins: {
+      'h2o2': {},
+      'inert': {},
       './lib/plugin-loader': { paths: ['../routes']}
     }
 };

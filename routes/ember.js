@@ -57,5 +57,6 @@ exports.register = function (server, options, next) {
 
 
 exports.register.attributes = {
-    name: 'ember'
+    name: 'ember',
+    dependencies: ['h2o2', 'inert']
 };

@@ -22,19 +22,21 @@
   },
   "homepage": "",
   "dependencies": {
-    "confidence": "^1.x.x",
+    "confidence": "^1.4.2",
     "dotenv": "^1.2.0",
-    "glue": "^2.x.x",
-    "hapi": "^8.x.x",
-    "hoek": "^2.x.x",
+    "glue": "^2.4.0",
+    "h2o2": "^4.0.2",
+    "hapi": "^11.x.x",
+    "hoek": "^3.0.4",
+    "inert": "^3.2.0",
+    "lab": "^7.3.0",
     "require-dir": "^0.3.0"
   },
   "devDependencies": {
-    "code": "^1.x.x",
+    "code": "^2.0.1",
     "dotenv": "^1.2.0",
     "gulp": "^3.9.0",
     "gulp-nodemon": "^2.0.3",
-    "lab": "^5.x.x",
     "nodemon": "^1.x.x",
     "require-dir": "^0.3.0",
     "yam": "0.0.18"
