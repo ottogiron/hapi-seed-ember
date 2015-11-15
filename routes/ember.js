@@ -13,6 +13,22 @@ exports.register = function (server, options, next) {
 
     server.route({
       method: 'GET',
+      path: '/robots.txt',
+      handler: {
+        file: 'client/dist/robots.txt'
+      }
+    });
+
+    server.route({
+      method: 'GET',
+      path: '/crossdomain.xml',
+      handler: {
+        file: 'client/dist/crossdomain.xml'
+      }
+    });
+
+    server.route({
+      method: 'GET',
       path: '/assets/{param*}',
       handler: {
         directory: {
