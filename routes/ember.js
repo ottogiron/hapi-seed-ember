@@ -32,7 +32,8 @@ exports.register = function (server, options, next) {
             proxy: {
                 host: 'localhost',
                 port: emberCLI.get('port')|| 4200,
-                protocol: 'http'
+                protocol: 'http',
+                passThrough: true
             }
           }
       });

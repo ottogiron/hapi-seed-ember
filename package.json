@@ -36,6 +36,7 @@
     "gulp-nodemon": "^2.0.3",
     "lab": "^5.x.x",
     "nodemon": "^1.x.x",
-    "require-dir": "^0.3.0"
+    "require-dir": "^0.3.0",
+    "yam": "0.0.18"
   }
 }
