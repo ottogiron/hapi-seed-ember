@@ -1,6 +1,7 @@
 
 var Hoek = require('hoek');
-
+//It shouldn't be necessary for you to modify this file.
+//If you need an additional route consider creating a new one.
 exports.register = function (server, options, next) {
 
     server.route({
