@@ -2,7 +2,7 @@ var Lab = require('lab');
 var Code = require('code');
 var Config = require('../../config');
 var Hapi = require('hapi');
-var IndexPlugin = require('../../routes/index');
+var IndexPlugin = require('../../routes/ember');
 
 
 var lab = exports.lab = Lab.script();
