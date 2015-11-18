@@ -20,6 +20,7 @@ Install <a href="http://www.ember-cli.com/">ember-cli</a>
 
 ```bash
 npm install -g ember-cli
+npm install  -g gulp
 ```
 
 ### Run the server
@@ -30,8 +31,9 @@ Uses buid/tasks/server.js task
 
 ```bash
 cd <my-project-name>
-npm  -g gulp
 npm install
+cd client
+npm install && bower install #install ember dependencies
 gulp serve
 ```
 
